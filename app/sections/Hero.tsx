@@ -160,6 +160,9 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 w-full sm:w-auto px-4 sm:px-0"
           >
             <motion.button
+              onClick={() =>
+                document.getElementById("products")?.scrollIntoView({ behavior: "smooth" })
+              }
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-uv-blue to-uv-purple text-white rounded-full font-semibold text-sm sm:text-base flex items-center gap-2 relative overflow-hidden w-full sm:w-auto justify-center"
