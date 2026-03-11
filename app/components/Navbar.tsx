@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Phone } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const navLinks = [
   { name: 'Home', href: '#home' },
-  { name: 'UV 300', href: '#printer' },
+  { name: 'About', href: '#about' },
   { name: 'Products', href: '#products' },
   { name: 'Services', href: '#services' },
   { name: 'Portfolio', href: '#portfolio' },
@@ -30,19 +32,14 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled ? 'glass-effect py-3' : 'bg-transparent py-6'
+          isScrolled ? 'glass-effect' : 'bg-transparent'
         }`}
       >
         <div className="section-padding max-w-7xl mx-auto flex items-center justify-between">
           <motion.div className="flex items-center gap-3" whileHover={{ scale: 1.05 }}>
-            <div className="w-10 h-10 bg-gradient-to-br from-uv-blue to-uv-purple rounded-lg flex items-center justify-center text-white font-bold text-xl">
-              UV
-            </div>
-            <div>
-              <span className={`font-bold text-xl ${isScrolled ? 'text-white' : 'text-white'}`}>
-                STUDIO 300
-              </span>
-            </div>
+            <Link href={"/"}>
+              <Image className={`pt-2`} src="/images/RV_Graphics.png" height="140" width="140"  alt='logo' />
+            </Link>
           </motion.div>
 
           <div className="hidden lg:flex items-center gap-8">

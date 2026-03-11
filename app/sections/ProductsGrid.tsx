@@ -6,51 +6,51 @@ import { ArrowUpRight } from 'lucide-react'
 const products = [
   {
     id: 1,
-    name: 'Banners & Posters',
-    description: 'Large format UV printed banners for indoor and outdoor use. Weather-resistant and vibrant colors.',
+    name: 'Helmet Decals',
+    description: 'Premium water transfer and polycarbonate decals for motorcycle helmets. Scratch-resistant and UV protected.',
     image: 'https://kimi-web-img.moonshot.cn/img/printodelivery.com/77cae58c89fcb886a52a9c9eca3800d51a2205d9.jpg',
-    tags: ['Outdoor', 'Indoor', 'Roll-up'],
-    price: 'From $25'
+    tags: ['Water Transfer', 'Polycarbonate', 'UV Protected'],
+    price: 'Custom Quote'
   },
   {
     id: 2,
-    name: 'Phone Cases',
-    description: 'Custom printed phone cases with photo-quality UV printing. Durable and scratch-resistant.',
+    name: 'Vinyl Stickers & Labels',
+    description: 'Self-adhesive vinyl stickers and roll labels for products. Weather-resistant with custom shapes.',
     image: 'https://kimi-web-img.moonshot.cn/img/www.textek.cn/bf97932dd0339a1d452d6e8dc0e078c6868cc2ad.jpg',
-    tags: ['iPhone', 'Samsung', 'Custom'],
-    price: 'From $15'
+    tags: ['Self Adhesive', 'Weather Proof', 'Custom Cut'],
+    price: 'From ₹500'
   },
   {
     id: 3,
-    name: 'Promotional Pens',
-    description: 'Branded pens with your logo UV printed. Perfect for corporate gifts and marketing.',
-    image: 'https://kimi-web-img.moonshot.cn/img/lasercoprint.com/6345a17bd9ce5c0d7c34ff5e32a7c0a3aba2a49a.jpg',
-    tags: ['Corporate', 'Bulk', 'Custom'],
-    price: 'From $2'
+    name: 'Packaging Boxes',
+    description: 'Corrugated boxes, rigid boxes, monocarton and kappa boxes with custom printing.',
+    image: 'https://kimi-web-img.moonshot.cn/img/3qprint-uploads.s3.ap-southeast-1.amazonaws.com/52ee7ec4f908c9e7d84b9adc65f3241a84a3e33c.webp',
+    tags: ['Corrugated', 'Rigid', 'Mono Carton'],
+    price: 'Custom Quote'
   },
   {
     id: 4,
-    name: 'Wood & Acrylic',
-    description: 'Print on wood, acrylic, and other rigid materials. Perfect for signage and decor.',
-    image: 'https://kimi-web-img.moonshot.cn/img/cdn-ildpddp.nitrocdn.com/48cf35bf448d5e7929c0c3dabfd416f5af01cd4d.png',
-    tags: ['Decor', 'Signage', 'Art'],
-    price: 'From $35'
+    name: 'Carry Bags & Laptop Bags',
+    description: 'Custom printed carry bags, paper bags and laptop bags with your logo and branding.',
+    image: 'https://kimi-web-img.moonshot.cn/img/lasercoprint.com/6345a17bd9ce5c0d7c34ff5e32a7c0a3aba2a49a.jpg',
+    tags: ['Paper Bags', 'Laptop Bags', 'Logo Print'],
+    price: 'From ₹25'
   },
   {
     id: 5,
-    name: 'Bunting & Flags',
-    description: 'Custom bunting and flags for events, promotions, and celebrations.',
-    image: 'https://kimi-web-img.moonshot.cn/img/3qprint-uploads.s3.ap-southeast-1.amazonaws.com/52ee7ec4f908c9e7d84b9adc65f3241a84a3e33c.webp',
-    tags: ['Events', 'Promo', 'Custom'],
-    price: 'From $30'
+    name: 'Golden Foil & UV Labels',
+    description: 'Premium golden foil stamping and UV spot printing for luxury packaging and labels.',
+    image: 'https://kimi-web-img.moonshot.cn/img/cdn-ildpddp.nitrocdn.com/48cf35bf448d5e7929c0c3dabfd416f5af01cd4d.png',
+    tags: ['Gold Foil', 'UV Spot', 'Premium'],
+    price: 'Custom Quote'
   },
   {
     id: 6,
-    name: 'Bottles & Tumblers',
-    description: 'UV printed water bottles, tumblers, and drinkware. Dishwasher safe prints.',
-    image: 'https://kimi-web-img.moonshot.cn/img/coldesi.com/c7b854297aa2ee82b0a1a320031c0f57e08091b9.jpg',
-    tags: ['Drinkware', 'Gifts', 'Corporate'],
-    price: 'From $20'
+    name: 'Folders, Flyers & Brochures',
+    description: 'Corporate stationery including folders, flyers, brochures, visiting cards and letterheads.',
+    image: 'https://kimi-web-img.moonshot.cn/img/image.made-in-china.com/cb65d5e538ec884e03c6e5d1cdd2c696a7c609e5.webp',
+    tags: ['Offset Print', 'Digital', 'Corporate'],
+    price: 'From ₹2'
   },
 ]
 
@@ -69,11 +69,12 @@ export default function ProductsGrid() {
             Our Products
           </span>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            UV Printed{' '}
-            <span className="text-gradient">Perfection</span>
+            Printing{' '}
+            <span className="text-gradient">Solutions</span>
           </h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
-            From banners to bottles, we print on virtually any material with stunning quality and durability.
+            From helmet decals to packaging boxes, we deliver high-quality printing 
+            for automotive, medical, and consumer durable industries.
           </p>
         </motion.div>
 
@@ -88,43 +89,54 @@ export default function ProductsGrid() {
               whileHover={{ y: -10 }}
               className="group relative rounded-2xl overflow-hidden bg-slate-900 border border-white/10 cursor-pointer"
             >
-              {/* Image */}
-              <div className="aspect-[4/3] overflow-hidden">
+              {/* Image Container */}
+              <div className="aspect-[4/3] overflow-hidden relative">
                 <img 
                   src={product.image} 
-                  alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  alt={product.name} 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-60" />
+                
+                {/* Dark overlay on hover - stronger gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                {/* Content that slides up on hover */}
+                <div className="absolute inset-0 flex flex-col justify-end p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  <div className="flex items-start justify-between mb-2">
+                    <h3 className="text-xl font-bold text-white group-hover:text-uv-blue transition-colors">
+                      {product.name}
+                    </h3>
+                    <motion.div
+                      whileHover={{ scale: 1.1, rotate: 45 }}
+                      className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm"
+                    >
+                      <ArrowUpRight size={20} className="text-white" />
+                    </motion.div>
+                  </div>
+                  
+                  <p className="text-white/80 text-sm mb-3 line-clamp-2">
+                    {product.description}
+                  </p>
+
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-2 flex-wrap">
+                      {product.tags.map((tag) => (
+                        <span key={tag} className="px-2 py-1 text-xs rounded-full bg-white/10 text-white/90 border border-white/20 backdrop-blur-sm">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="text-uv-blue font-semibold text-sm bg-slate-950/50 px-2 py-1 rounded">{product.price}</span>
+                  </div>
+                </div>
               </div>
 
-              {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <div className="flex items-start justify-between mb-2">
-                  <h3 className="text-xl font-bold text-white group-hover:text-uv-blue transition-colors">
-                    {product.name}
-                  </h3>
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 45 }}
-                    className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-                  >
-                    <ArrowUpRight size={20} className="text-white" />
-                  </motion.div>
-                </div>
-                
-                <p className="text-white/60 text-sm mb-4 line-clamp-2">
-                  {product.description}
-                </p>
-
+              {/* Always visible content (shown when not hovering) */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-slate-950 via-slate-950/90 to-transparent group-hover:opacity-0 transition-opacity duration-300">
+                <h3 className="text-xl font-bold text-white mb-1">{product.name}</h3>
                 <div className="flex items-center justify-between">
-                  <div className="flex gap-2">
-                    {product.tags.map((tag) => (
-                      <span key={tag} className="px-2 py-1 text-xs rounded-full bg-white/5 text-white/50 border border-white/10">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <span className="text-uv-blue font-semibold">{product.price}</span>
+                  <span className="text-white/50 text-sm">{product.tags[0]}</span>
+                  <span className="text-uv-blue font-semibold text-sm">{product.price}</span>
                 </div>
               </div>
             </motion.div>

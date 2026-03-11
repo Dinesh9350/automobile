@@ -1,43 +1,43 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Ruler, Clock, Truck, Palette, Shield, Headphones } from 'lucide-react'
+import { Ruler, Clock, Truck, Palette, Shield, Factory } from 'lucide-react'
 
 const services = [
   {
     icon: Palette,
     title: 'Custom Design',
-    description: 'Professional design services to make your prints stand out. From concept to final print.',
+    description: 'Professional design services for decals, labels and packaging. From concept to final print.',
     color: 'from-uv-blue to-uv-cyan'
   },
   {
-    icon: Ruler,
-    title: 'Any Size',
-    description: 'From small promotional items to large 3.2m banners. No size limitations.',
+    icon: Factory,
+    title: 'In-House Production',
+    description: 'Complete manufacturing setup with screen printing, digital printing and curing facilities.',
     color: 'from-uv-purple to-uv-pink'
   },
   {
-    icon: Clock,
-    title: 'Fast Turnaround',
-    description: '24-48 hour turnaround on most orders. Rush service available.',
+    icon: Ruler,
+    title: 'Any Size & Shape',
+    description: 'Custom die-cutting for stickers and labels. No shape limitations with precision cutting.',
     color: 'from-uv-pink to-uv-orange'
   },
   {
     icon: Shield,
     title: 'Quality Guaranteed',
-    description: 'Satisfaction guaranteed. UV resistant, waterproof, and scratch-proof prints.',
+    description: 'Rigorous quality control with 0% defect tolerance. Material traceability guaranteed.',
     color: 'from-uv-orange to-yellow-500'
   },
   {
     icon: Truck,
-    title: 'Nationwide Shipping',
-    description: 'We ship anywhere in the country. Local delivery available in select areas.',
+    title: 'All India Shipping',
+    description: 'We deliver across India. Located in Bahadurgarh, Haryana with reliable logistics.',
     color: 'from-green-500 to-emerald-500'
   },
   {
-    icon: Headphones,
-    title: '24/7 Support',
-    description: 'Round the clock customer support for all your printing needs.',
+    icon: Clock,
+    title: 'Fast Turnaround',
+    description: 'Quick turnaround on orders with 24/7 quality monitoring and production tracking.',
     color: 'from-uv-cyan to-blue-500'
   }
 ]
@@ -60,7 +60,7 @@ export default function Services() {
           </span>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Why Choose{' '}
-            <span className="text-gradient">UV Studio</span>
+            <span className="text-gradient">R.V. Graphics</span>
           </h2>
         </motion.div>
 

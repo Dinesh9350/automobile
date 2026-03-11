@@ -1,7 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Facebook, Instagram, Twitter, Linkedin, ArrowUp } from 'lucide-react'
+import { Facebook, Instagram, Linkedin, ArrowUp } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -12,16 +13,14 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-uv-blue to-uv-purple rounded-lg flex items-center justify-center text-white font-bold">
-                UV
-              </div>
-              <span className="text-2xl font-bold text-white">STUDIO 300</span>
+              <Image className={`pt-2`} src="/images/RV_Graphics.png" height="140" width="140"  alt='logo' />
             </div>
             <p className="text-white/50 max-w-sm mb-6">
-              Professional UV printing services for banners, posters, promotional products, and custom merchandise. Quality that lasts.
+              Leading manufacturer of Helmet Decals, Water Transfer Decals, Vinyl Stickers, 
+              Self Adhesive Labels and Packaging Solutions. Based in Bahadurgarh, Haryana, India.
             </p>
             <div className="flex gap-4">
-              {[Facebook, Instagram, Twitter, Linkedin].map((Icon, i) => (
+              {[Facebook, Instagram, Linkedin].map((Icon, i) => (
                 <motion.a
                   key={i}
                   href="#"
@@ -37,7 +36,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Products</h4>
             <ul className="space-y-2">
-              {['Banners & Posters', 'Phone Cases', 'Promotional Items', 'Signage', 'Custom Gifts'].map((item) => (
+              {['Helmet Decals', 'Vinyl Stickers', 'Packaging Boxes', 'Labels & Tags', 'Carry Bags'].map((item) => (
                 <li key={item}><a href="#" className="text-white/50 hover:text-white transition-colors">{item}</a></li>
               ))}
             </ul>
@@ -46,7 +45,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
-              {['About Us', 'Our Process', 'Portfolio', 'Contact', 'Get Quote'].map((item) => (
+              {['About Us', 'Infrastructure', 'Portfolio', 'Contact', 'Get Quote'].map((item) => (
                 <li key={item}><a href="#" className="text-white/50 hover:text-white transition-colors">{item}</a></li>
               ))}
             </ul>
@@ -54,7 +53,7 @@ export default function Footer() {
         </div>
         
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/30 text-sm">© 2024 UV Studio 300. All rights reserved.</p>
+          <p className="text-white/30 text-sm">© 2026 R.V. Graphics. All rights reserved.</p>
           <div className="flex gap-6 text-sm text-white/30">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
